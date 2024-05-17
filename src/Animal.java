@@ -1,14 +1,14 @@
-public abstract class Animal {
+public class Animal {
     private String nome;
-    private String raça;
+    private String raca;
     private boolean castrado;
     private double idade;
     private String especie;
     private String sexo;
 
-    public Animal(String nome, String raça, boolean castrado, double idade, String especie, String sexo) {
+    public Animal(String nome, String raca, boolean castrado, double idade, String especie, String sexo) {
         this.nome = nome;
-        this.raça = raça;
+        this.raca = raca;
         this.castrado = castrado;
         this.idade = idade;
         this.especie = especie;
@@ -23,12 +23,12 @@ public abstract class Animal {
         this.nome = nome;
     }
 
-    public String getRaça() {
-        return raça;
+    public String getRaca() {
+        return raca;
     }
 
-    public void setRaça(String raça) {
-        this.raça = raça;
+    public void setRaca(String raca) {
+        this.raca = raca;
     }
 
     public boolean getCastrado() {
