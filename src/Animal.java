@@ -43,7 +43,6 @@ public class Animal {
         }
     }
 
-
     public double getIdade() {
         return idade;
     }
@@ -68,3 +67,7 @@ public class Animal {
         this.sexo = sexo;
     }
 }
+
+
+
+
