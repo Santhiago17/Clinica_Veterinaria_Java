@@ -59,7 +59,7 @@ public class Main {
         int idade = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("O animal já foi castrado? (true/false): ");
+        System.out.print("O animal já foi castrado? (Sim/Não): ");
         String castrado = scanner.nextLine();
 
         System.out.print("Sexo do animal: ");

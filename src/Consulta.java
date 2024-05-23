@@ -11,7 +11,8 @@ public class Consulta {
     public String toString() {
         return "Consulta{" +
                 "motivo='" + motivo + '\'' +
-                ", animal=" + animal +
+                ", animal=" + animal.getNome() +
                 '}';
     }
+
 }
