@@ -1,12 +1,12 @@
 public class Animal {
     private String nome;
     private String raca;
-    private boolean castrado;
+    private String castrado;
     private double idade;
     private String especie;
     private String sexo;
 
-    public Animal(String nome, String raca, boolean castrado, double idade, String especie, String sexo) {
+    public Animal(String nome, String raca, String castrado, double idade, String especie, String sexo) {
         this.nome = nome;
         this.raca = raca;
         this.castrado = castrado;
@@ -31,13 +31,18 @@ public class Animal {
         this.raca = raca;
     }
 
-    public boolean getCastrado() {
+    public String getCastrado() {
         return castrado;
     }
 
-    public void setCastrado(boolean castrado) {
-        this.castrado = castrado;
+    public void setCastrado(String castrado) {
+        if (castrado.equalsIgnoreCase("não") || castrado.equalsIgnoreCase("nao")) {
+            this.castrado = castrado;
+        } else {
+            throw new IllegalArgumentException("Valor inválido para castrado: " + castrado);
+        }
     }
+
 
     public double getIdade() {
         return idade;
