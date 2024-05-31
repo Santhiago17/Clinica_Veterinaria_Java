@@ -65,7 +65,15 @@ public class Main {
         System.out.print("Sexo do animal: ");
         String sexo = scanner.nextLine();
 
-        Animal animal = new Animal(nome, especie, castrado, idade, raca, sexo);
+        System.out.print("Nome do tutor do animal: ");
+        String nomeTutor = scanner.nextLine();
+
+        System.out.print("Telefone do tutor do animal: ");
+        String telefoneTutor = scanner.nextLine();
+
+        Tutor tutor = new Tutor(nomeTutor, telefoneTutor);
+
+        Animal animal = new Animal(nome, especie, castrado, idade, raca, sexo,tutor);
         animais.add(animal);
         System.out.println("Animal cadastrado com sucesso!");
     }

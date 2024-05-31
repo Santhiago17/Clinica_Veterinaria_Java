@@ -2,17 +2,20 @@ public class Animal {
     private String nome;
     private String raca;
     private String castrado;
-    private double idade;
+    private int idade;
     private String especie;
     private String sexo;
+    private Tutor tutor;
 
-    public Animal(String nome, String raca, String castrado, double idade, String especie, String sexo) {
+    public Animal(String nome, String raca, String castrado, int idade, String especie, String sexo,Tutor tutor) {
         this.nome = nome;
         this.raca = raca;
         this.castrado = castrado;
         this.idade = idade;
         this.especie = especie;
         this.sexo = sexo;
+        this.tutor = tutor;
+
     }
 
     public String getNome() {
@@ -43,11 +46,11 @@ public class Animal {
         }
     }
 
-    public double getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(double idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
