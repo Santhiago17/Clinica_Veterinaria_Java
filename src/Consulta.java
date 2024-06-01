@@ -10,8 +10,8 @@ public class Consulta {
     @Override
     public String toString() {
         return "Consulta{" +
-                "motivo='" + motivo + '\'' +
-                ", animal=" + animal.getNome() +
+                "\n motivo='" + motivo + '\'' +
+                ",\n animal=" + animal.getNome() +
                 '}';
     }
 

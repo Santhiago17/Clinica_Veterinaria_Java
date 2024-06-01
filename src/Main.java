@@ -44,6 +44,10 @@ public class Main {
                     default:
                     System.out.println("Opção inválida.");
             }
+            System.out.println();
+            System.out.println("Pressione Enter para continuar...");
+            scanner.nextLine();
+            System.out.println("\n".repeat(15));
         }
 
         scanner.close();
