@@ -69,7 +69,21 @@ public class Animal {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "\n nome='" + nome + '\'' +
+                ",\n raca='" + raca + '\'' +
+                ",\n castrado='" + castrado + '\'' +
+                ",\n idade=" + idade +
+                ",\n especie='" + especie + '\'' +
+                ",\n sexo='" + sexo + '\'' +
+                ",\n tutor=" + tutor +
+                '}';
+    }
 }
+
 
 
 

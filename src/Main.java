@@ -29,7 +29,7 @@ public class Main {
                     listarAnimais();
                     break;
                 case 3:
-                    cadastrarConsulta(scanner);  // Passar scanner como argumento
+                    cadastrarConsulta(scanner);
                     break;
                 case 4:
                     listarConsultas();
