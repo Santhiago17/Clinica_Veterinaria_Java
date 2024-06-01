@@ -16,7 +16,8 @@ public class Main {
             System.out.println("2. Listar animais cadastrados");
             System.out.println("3. Marcar consulta");
             System.out.println("4. Listar consultas marcadas");
-            System.out.println("5. Sair");
+            System.out.println("5. Listar cadastro geral");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -37,7 +38,10 @@ public class Main {
                 case 5:
                     continuar = false;
                     break;
-                default:
+                case 6:
+                    listarCadastroGeral();
+                    break;
+                    default:
                     System.out.println("Opção inválida.");
             }
         }
@@ -157,4 +161,17 @@ public class Main {
             }
         }
     }
+
+    private static void listarCadastroGeral() {
+        System.out.println("Animais cadastrados:");
+        for (Animal animal : animais) {
+            System.out.println(animal);
+        }
+
+        System.out.println("Consultas marcadas:");
+        for (Consulta consulta : consultas) {
+            System.out.println(consulta);
+        }
+    }
+
 }
