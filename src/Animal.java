@@ -1,18 +1,21 @@
 public class Animal {
     private String nome;
     private String raca;
-    private boolean castrado;
-    private double idade;
+    private String castrado;
+    private int idade;
     private String especie;
     private String sexo;
+    private Tutor tutor;
 
-    public Animal(String nome, String raca, boolean castrado, double idade, String especie, String sexo) {
+    public Animal(String nome, String raca, String castrado, int idade, String especie, String sexo,Tutor tutor) {
         this.nome = nome;
         this.raca = raca;
         this.castrado = castrado;
         this.idade = idade;
         this.especie = especie;
         this.sexo = sexo;
+        this.tutor = tutor;
+
     }
 
     public String getNome() {
@@ -31,19 +34,23 @@ public class Animal {
         this.raca = raca;
     }
 
-    public boolean getCastrado() {
+    public String getCastrado() {
         return castrado;
     }
 
-    public void setCastrado(boolean castrado) {
-        this.castrado = castrado;
+    public void setCastrado(String castrado) {
+        if (castrado.equalsIgnoreCase("não") || castrado.equalsIgnoreCase("nao")) {
+            this.castrado = castrado;
+        } else {
+            throw new IllegalArgumentException("Valor inválido para castrado: " + castrado);
+        }
     }
 
-    public double getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(double idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
@@ -62,4 +69,22 @@ public class Animal {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "\n nome='" + nome + '\'' +
+                ",\n raca='" + raca + '\'' +
+                ",\n castrado='" + castrado + '\'' +
+                ",\n idade=" + idade +
+                ",\n especie='" + especie + '\'' +
+                ",\n sexo='" + sexo + '\'' +
+                ",\n tutor=" + tutor +
+                '}';
+    }
 }
+
+
+
+
+
